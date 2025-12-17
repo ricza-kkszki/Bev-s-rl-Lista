@@ -255,5 +255,15 @@ namespace bevasarlolista
         {
             dataGrid.ItemsSource = termekek.OrderBy(t => t.Nev);
         }
+
+        private void aCategoryBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => t.Kategoria == "A").OrderBy(t => t.Nev).Select(t => new
+            {
+                Kategoria = t.Kategoria,
+                Nev = t.Nev,
+                Osszes = t.Osszesen
+            });
+        }
     }
 }

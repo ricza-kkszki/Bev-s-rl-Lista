@@ -42,6 +42,7 @@
                     <ProgressBar x:Name="priceProgressBar" Height="25" Width="100" Margin="10" Minimum="0" Maximum="100" Value="0"/>
                     <Button Content="Nem C kategóriások" Width="155" Margin="5" Click="notCBtn"/>
                     <Button Content="Név Hossz" Width="155" Margin="5" Click="nameLengthBtn"/>
+                    <Button Content="A kategóriások" Width="155" Margin="5" Click="aCategoryBtn"/>
                 </WrapPanel>
             </GroupBox>
         </ScrollViewer>
