@@ -24,6 +24,7 @@
                     <Button Content="Ár szerint csökkenő" Width="150" Margin="5" Click="DescendingPriceBtn"/>
                     <Button Content="Minden D típus > 500" Width="150" Margin="5" Click="dOver500Btn"/>
                     <Button Content="Név + Összérték ABC" Width="150" Margin="5" Click="nameAndTotalBtn"/>
+                    <Button Content="Típus DB + Összérték" Width="150" Margin="5" Click="typeQuantityAndTotalBtn"/>
                 </WrapPanel>
             </GroupBox>
         </ScrollViewer>

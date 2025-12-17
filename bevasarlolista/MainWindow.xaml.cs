@@ -104,5 +104,10 @@ namespace bevasarlolista
         {
             dataGrid.ItemsSource = termekek.OrderBy(x => x.Nev).Select(g => new { Nev = g.Nev, Osszesen = g.Osszesen });
         }
+
+        private void typeQuantityAndTotalBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.OrderBy(x => x.Nev).GroupBy(g => g.Kategoria).Select(g => new { Tipus = g.Key, Darab = g.Sum(t => t.Mennyiseg), Osszesen = g.Sum(t => t.Osszesen) });
+        }
     }
 }
