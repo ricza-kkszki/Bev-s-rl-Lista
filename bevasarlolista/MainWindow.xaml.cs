@@ -183,5 +183,19 @@ namespace bevasarlolista
                 Darab = g.Sum(h => h.Mennyiseg)
             }); 
         }
+
+        private void zeroFtBtn(object sender, RoutedEventArgs e)
+        {
+            var nullaFtosTermek = termekek.Any(x => x.Ar == 0);
+
+            if (nullaFtosTermek == false)
+            {
+                MessageBox.Show("Nincs nulla ft-os termék");
+            }
+            else
+            {
+                MessageBox.Show("Van nulla ft-os termék");
+            }
+        }
     }
 }

@@ -34,6 +34,7 @@
                     <Button Content="Terméknév típus csoportosítás" Width="180" Margin="5" Click="groupByNameAndTypeBtn"/>
                     <Button Content="Legértékesebb termék típusonként" Width="200" Margin="5" Click="mostExpensivePerTypeBtn"/>
                     <Button Content="Összesített db típusonként" Width="155" Margin="5" Click="totalCountPerTypeBtn"/>
+                    <Button Content="Van 0ft-os termék?" Width="155" Margin="5" Click="zeroFtBtn"/>
                 </WrapPanel>
             </GroupBox>
         </ScrollViewer>
