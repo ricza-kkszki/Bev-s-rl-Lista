@@ -224,5 +224,9 @@ namespace bevasarlolista
                 MessageBox.Show("Nincs eggyező");
             }
         }
+        private void Valtozas(object sender, TextChangedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => t.Nev.ToLower().Contains(textBox.Text.ToLower())).ToList();
+        }
     }
 }

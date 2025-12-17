@@ -37,6 +37,7 @@
                     <Button Content="Van 0ft-os termék?" Width="155" Margin="5" Click="zeroFtBtn"/>
                     <Button Content="Csak Kenyér" Width="155" Margin="5" Click="onlyBreadBtn"/>
                     <Button Content="Egyező Ár" Width="155" Margin="5" Click="matchingPriceBtn"/>
+                    <TextBox x:Name="textBox" Width="150" Margin="5" TextChanged="Valtozas"/>
                 </WrapPanel>
             </GroupBox>
         </ScrollViewer>
