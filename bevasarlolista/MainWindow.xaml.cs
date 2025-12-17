@@ -65,7 +65,7 @@ namespace bevasarlolista
 
         private void RemoveBtn(object sender, RoutedEventArgs e)
         {
-            if (dataGrid.SelectedItem != null)
+            if (dataGrid.SelectedItem != null && dataGrid.SelectedItem is ItemModel)
             {
                 termekek.Remove((ItemModel)dataGrid.SelectedItem);
                 dataGrid.Items.Refresh();
@@ -80,6 +80,11 @@ namespace bevasarlolista
         private void Top5TotalBtn(object sender, RoutedEventArgs e)
         {
             dataGrid.ItemsSource = termekek.OrderByDescending(x => x.Osszesen).Take(5);
+        }
+
+        private void MoreThan1Btn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => t.Mennyiseg > 1).Select(k => new { Nev = k.Nev, Osszesen = k.Osszesen });
         }
     }
 }
