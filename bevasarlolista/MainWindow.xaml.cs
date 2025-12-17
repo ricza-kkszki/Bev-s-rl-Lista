@@ -165,5 +165,14 @@ namespace bevasarlolista
                 Darab = x.Count()
             });
         }
+
+        private void mostExpensivePerTypeBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.GroupBy(item => item.Kategoria).Select(item => new
+            {
+                Kategoria = item.Key,
+                Ar = item.Max(x => x.Ar)
+            });
+        }
     }
 }
