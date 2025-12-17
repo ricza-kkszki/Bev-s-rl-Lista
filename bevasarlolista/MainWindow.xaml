@@ -35,6 +35,8 @@
                     <Button Content="Legértékesebb termék típusonként" Width="200" Margin="5" Click="mostExpensivePerTypeBtn"/>
                     <Button Content="Összesített db típusonként" Width="155" Margin="5" Click="totalCountPerTypeBtn"/>
                     <Button Content="Van 0ft-os termék?" Width="155" Margin="5" Click="zeroFtBtn"/>
+                    <Button Content="Csak Kenyér" Width="155" Margin="5" Click="onlyBreadBtn"/>
+                    <Button Content="Egyező Ár" Width="155" Margin="5" Click="matchingPriceBtn"/>
                 </WrapPanel>
             </GroupBox>
         </ScrollViewer>

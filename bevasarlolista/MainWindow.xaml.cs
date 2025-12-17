@@ -45,7 +45,7 @@ namespace bevasarlolista
             termekek.Add(new ItemModel("Narancs", 15, 300, "C"));
             termekek.Add(new ItemModel("Hús", 3, 2500, "D"));
             termekek.Add(new ItemModel("Csokoládé", 7, 900, "B"));
-            termekek.Add(new ItemModel("Kenyér", 1, 450, "B"));
+            termekek.Add(new ItemModel("Kenyer2", 1, 450, "B"));
             termekek.Add(new ItemModel("Tej", 12, 400, "A"));
             termekek.Add(new ItemModel("Sajt", 5, 1500, "D"));
         }
@@ -195,6 +195,33 @@ namespace bevasarlolista
             else
             {
                 MessageBox.Show("Van nulla ft-os termék");
+            }
+        }
+
+        private void onlyBreadBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(x => x.Nev.ToLower().Contains("kenyer")).OrderByDescending(x=>x.Ar);
+        }
+
+        private void matchingPriceBtn(object sender, RoutedEventArgs e)
+        {
+            var egyformak = termekek
+                .GroupBy(x => x.Ar)
+                .Select(g => new
+                {
+                    Darab = g.Count()
+                })
+                .Where(z => z.Darab > 1);
+
+            dataGrid.ItemsSource = egyformak;
+
+            if (egyformak.Any())
+            {
+                MessageBox.Show("Van eggyező");
+            }
+            else
+            {
+                MessageBox.Show("Nincs eggyező");
             }
         }
     }
