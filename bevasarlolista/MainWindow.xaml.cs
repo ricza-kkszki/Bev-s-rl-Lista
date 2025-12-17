@@ -174,5 +174,14 @@ namespace bevasarlolista
                 Ar = item.Max(x => x.Ar)
             });
         }
+
+        private void totalCountPerTypeBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.GroupBy(f => f.Kategoria).Select(g => new
+            {
+                Kategoria = g.Key,
+                Darab = g.Sum(h => h.Mennyiseg)
+            }); 
+        }
     }
 }
