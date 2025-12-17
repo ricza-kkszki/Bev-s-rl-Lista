@@ -127,5 +127,10 @@ namespace bevasarlolista
                 Osszertek = g.Max(x => x.Osszesen)
             });
         }
+
+        private void bcUnder1000Btn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => (t.Kategoria == "B" || t.Kategoria == "C") && t.Ar < 1000);
+        }
     }
 }
