@@ -141,5 +141,10 @@ namespace bevasarlolista
                 TermekekSzama = y.Count()
             });
         }
+
+        private void moreThan10CheaperThan1000Btn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => t.Mennyiseg > 10 && t.Ar < 1000).OrderBy(t=>t.Ar);
+        }
     }
 }
