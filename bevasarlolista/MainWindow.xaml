@@ -16,6 +16,8 @@
             <GroupBox Header="Termekek" Margin="10">
                 <WrapPanel>
                     <Button Content="Hozzáadás" Width="150" Margin="5" Click="AddBtn"/>
+                    <Button Content="Törlés" Width="150" Margin="5" Click="RemoveBtn"/>
+                    <Button Content="A típus 3 legdrágább" Width="150" Margin="5" Click="Top3ABtn"/>
                 </WrapPanel>
             </GroupBox>
         </ScrollViewer>

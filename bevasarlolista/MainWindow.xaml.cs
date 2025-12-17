@@ -62,5 +62,19 @@ namespace bevasarlolista
                 dataGrid.Items.Refresh();
             }
         }
+
+        private void RemoveBtn(object sender, RoutedEventArgs e)
+        {
+            if (dataGrid.SelectedItem != null)
+            {
+                termekek.Remove((ItemModel)dataGrid.SelectedItem);
+                dataGrid.Items.Refresh();
+            }
+        }
+
+        private void Top3ABtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => t.Kategoria == "A").OrderByDescending(x=>x.Ar).Take(3);
+        }
     }
 }
