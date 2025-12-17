@@ -146,5 +146,10 @@ namespace bevasarlolista
         {
             dataGrid.ItemsSource = termekek.Where(t => t.Mennyiseg > 10 && t.Ar < 1000).OrderBy(t=>t.Ar);
         }
+
+        private void totalAbove2000abcBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(x => x.Osszesen > 2000).OrderBy(t => t.Nev);
+        }
     }
 }
