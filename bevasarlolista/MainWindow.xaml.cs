@@ -48,7 +48,10 @@ namespace bevasarlolista
             termekek.Add(new ItemModel("Kenyér", 1, 450, "B"));
             termekek.Add(new ItemModel("Tej", 12, 400, "A"));
             termekek.Add(new ItemModel("Sajt", 5, 1500, "D"));
+        }
 
+        private void LoadBtn(object sender, RoutedEventArgs e)
+        {
             dataGrid.ItemsSource = termekek;
         }
 
@@ -85,6 +88,11 @@ namespace bevasarlolista
         private void MoreThan1Btn(object sender, RoutedEventArgs e)
         {
             dataGrid.ItemsSource = termekek.Where(t => t.Mennyiseg > 1).Select(k => new { Nev = k.Nev, Osszesen = k.Osszesen });
+        }
+
+        private void DescendingPriceBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.OrderByDescending(t => t.Ar);
         }
     }
 }
