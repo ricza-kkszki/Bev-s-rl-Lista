@@ -246,5 +246,9 @@ namespace bevasarlolista
             }
         }
 
+        private void notCBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => t.Kategoria != "C");
+        }
     }
 }
