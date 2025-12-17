@@ -1,0 +1,35 @@
+﻿<Window x:Class="bevasarlolista.Hozzaadas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bevasarlolista"
+        mc:Ignorable="d"
+        Title="Új termék" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Termék:" Margin="0,10,0,0"/>
+        <TextBox x:Name="nev" Grid.Row="0" Width="150" Height="20" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+        <Label Grid.Row="1" Content="Mennyiség:" Margin="0,10,0,0"/>
+        <TextBox x:Name="mennyiseg" Grid.Row="1" Width="150" Height="20" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+        <Label Grid.Row="2" Content="Ár:" Margin="0,10,0,0"/>
+        <TextBox x:Name="ar" Grid.Row="2" Width="150" Height="20" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+        <Label Grid.Row="3" Content="Kategória:" Margin="0,10,0,0"/>
+        <ComboBox x:Name="kategoria" Grid.Row="3" Width="150" Height="20" HorizontalAlignment="Right" Margin="0,0,20,0">
+            <ComboBoxItem Content="A"/>
+            <ComboBoxItem Content="B"/>
+            <ComboBoxItem Content="C"/>
+            <ComboBoxItem Content="D"/>
+        </ComboBox>
+        <StackPanel Grid.Row="5" Orientation="Horizontal">
+        <Button Height="35" Width="80" Content="Ok" HorizontalAlignment="Right" Margin="20,0,0,0" Click="Ok_Click"/>
+        <Button Height="35" Width="80" Content="Mégse" HorizontalAlignment="Right" Margin="20,0,0,0" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
