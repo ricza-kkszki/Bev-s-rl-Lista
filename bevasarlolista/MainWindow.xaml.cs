@@ -94,5 +94,15 @@ namespace bevasarlolista
         {
             dataGrid.ItemsSource = termekek.OrderByDescending(t => t.Ar);
         }
+
+        private void dOver500Btn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => t.Kategoria == "D" && t.Ar > 500);
+        }
+
+        private void nameAndTotalBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.OrderBy(x => x.Nev).Select(g => new { Nev = g.Nev, Osszesen = g.Osszesen });
+        }
     }
 }
