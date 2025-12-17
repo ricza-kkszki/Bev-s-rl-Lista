@@ -132,5 +132,14 @@ namespace bevasarlolista
         {
             dataGrid.ItemsSource = termekek.Where(t => (t.Kategoria == "B" || t.Kategoria == "C") && t.Ar < 1000);
         }
+
+        private void above500Btn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.Where(t => t.Ar > 500).GroupBy(x => x.Kategoria).Select(y => new
+            {
+                Kategoria = y.Key,
+                TermekekSzama = y.Count()
+            });
+        }
     }
 }
