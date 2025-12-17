@@ -18,6 +18,7 @@
                     <Button Content="Hozzáadás" Width="150" Margin="5" Click="AddBtn"/>
                     <Button Content="Törlés" Width="150" Margin="5" Click="RemoveBtn"/>
                     <Button Content="A típus 3 legdrágább" Width="150" Margin="5" Click="Top3ABtn"/>
+                    <Button Content="Top 5 összérték szerint" Width="150" Margin="5" Click="Top5TotalBtn"/>
                 </WrapPanel>
             </GroupBox>
         </ScrollViewer>

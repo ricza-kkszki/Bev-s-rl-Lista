@@ -76,5 +76,10 @@ namespace bevasarlolista
         {
             dataGrid.ItemsSource = termekek.Where(t => t.Kategoria == "A").OrderByDescending(x=>x.Ar).Take(3);
         }
+
+        private void Top5TotalBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.OrderByDescending(x => x.Osszesen).Take(5);
+        }
     }
 }
