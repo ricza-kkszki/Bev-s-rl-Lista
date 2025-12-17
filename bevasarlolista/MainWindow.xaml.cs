@@ -118,5 +118,14 @@ namespace bevasarlolista
                 Atlagar = Math.Round(g.Average(t => t.Ar),2)
             });
         }
+
+        private void highestTotalPerCategoryBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.GroupBy(t => t.Kategoria).Select(g => new
+            {
+                Kategoria = g.Key,
+                Osszertek = g.Max(x => x.Osszesen)
+            });
+        }
     }
 }
