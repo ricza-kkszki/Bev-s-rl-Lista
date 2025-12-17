@@ -31,6 +31,7 @@
                     <Button Content="500ft felett, csoport szerint" Width="150" Margin="5" Click="above500Btn"/>
                     <Button Content="10db felett, Kisebb 1000 ftnál" Width="165" Margin="5" Click="moreThan10CheaperThan1000Btn"/>
                     <Button Content="Összérték nagyobb 2000ft ABC" Width="180" Margin="5" Click="totalAbove2000abcBtn"/>
+                    <Button Content="Terméknév típus csoportosítás" Width="180" Margin="5" Click="groupByNameAndTypeBtn"/>
                 </WrapPanel>
             </GroupBox>
         </ScrollViewer>

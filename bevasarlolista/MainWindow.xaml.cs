@@ -151,5 +151,19 @@ namespace bevasarlolista
         {
             dataGrid.ItemsSource = termekek.Where(x => x.Osszesen > 2000).OrderBy(t => t.Nev);
         }
+
+        private void groupByNameAndTypeBtn(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = termekek.GroupBy(t => new
+            {
+                Nev = t.Nev,
+                Kategoria = t.Kategoria
+            }).Select(x => new
+            {
+                TermekNev = x.Key.Nev,
+                Kategoria = x.Key.Kategoria,
+                Darab = x.Count()
+            });
+        }
     }
 }
